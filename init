@@ -1,0 +1,14 @@
+#!/bin/bash
+cp start.env .env
+
+# Apply migrations
+./s migrate
+
+# Make a superuser account
+
+./s makesuperuser
+
+git init
+git add .
+git commit -a -m "Initial commit"
+echo "🚀 Done!"
