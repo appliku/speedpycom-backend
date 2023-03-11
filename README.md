@@ -89,8 +89,7 @@ applied.
 
 ## Dockerfile
 
-Docker file includes both Python and Node so you can have JS compilers, minifiers and use `django-tailwind` that is included into this template.
-
+Dockerfile contains instructions for convenient development. Uncomment the `useradd` and `USER` lines to develop within GitPod environment.
 
 ## Deployment
 
