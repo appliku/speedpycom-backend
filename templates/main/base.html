@@ -1,4 +1,4 @@
-{% load static tailwind_tags %}
+{% load static  %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +9,7 @@
     {% endblock %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {% tailwind_css %}
     <script src="{% static 'main/alpine.min.js' %}" defer></script>
-    <script src="{% static 'main/versoly-ui.js' %}" defer></script>
 </head>
 
 <body class="font-sans-serif leading-normal tracking-normal">
