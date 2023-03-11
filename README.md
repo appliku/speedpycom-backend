@@ -2,39 +2,41 @@
 
 ## Quickstart
 
-This is the starter template for SpeedPyCom and you can edit any file you want.
+This is the starter backend boilerplate SpeedPyCom.
 
-To update the SpeedPyCom you need to update the requirements.txt file to have the most recent speedpycom package.
+Edit any files you want to change and start building your project.
 
-https://pypi.org/project/speedpycom/
+It is recommended to avoid editing project/settings_base.py for ease of future updates.
+
+## Update SpeedPyCom
+To update speedpycom-backend update the requirements.txt and settings_base.py files.
 
 ### Get the template and start work
 
-For local development you should have Docker instance running locally. Read more about docker-compose.yml down the
-document.
+For local development you should have Docker instance running locally.
+
+Read more about docker-compose.yml down the document.
 
 ```bash
-curl -sSL https://gitlab.com/speedpycom/speedpycom-start/-/archive/main/speedpycom-start-main.zip > speedpycom-start-main.zip
-unzip speedpycom-start-main.zip
+curl -sSL https://gitlab.com/speedpycom/speedpycom-backend/-/archive/main/speedpycom-backend-main.zip > speedpycom-backend-main.zip
+unzip speedpycom-backend-main.zip
 
-
-mv speedpycom-start-main myproject
+mv speedpycom-backend-main myproject
 cd myproject
 cp start.env .env
-
 ```
 
 
 Apply migrations with:
 
 ```bash
-docker-compose run web python manage.py migrate
+docker compose run web python manage.py migrate
 ```
 
 Create a superuser account:
 
 ```bash
-docker-compose run web python manage.py makesuperuser
+docker compose run web python manage.py makesuperuser
 ```
 
 The output of the last command will display the login and password for the admin user that was created, like this:
@@ -46,21 +48,14 @@ A superuser was created with email admin@example.com and password xLV9i9D7p8bm
 ===================================
 ```
 
-Install tailwind dependencies and build it:
-
-```bash
-docker-compose run web python manage.py tailwind install
-docker-compose run web python manage.py tailwind build
-```
-
 Run the project with:
 
 ```bash
-docker-compose up
+docker compose up
 ```
 
 
-Open [http://0.0.0.0:8060/admin/](http://0.0.0.0:8060/admin/) and login with these credentials.
+Open [http://127.0.0.1:8060/admin/](http://127.0.0.1:8060/admin/) and login with these credentials.
 
 ## Docker-Compose.yml for local development
 
@@ -102,8 +97,3 @@ In order to deploy the project on [https://Appliku.com](https://Appliku.com) we 
 ## User model
 
 Project template comes with a custom user model in the app `usermodel`.
-
-## Tailwind
-
-Run `docker-compose run web python manage.py tailwind install` to install node dependencies to run tailwind.
-

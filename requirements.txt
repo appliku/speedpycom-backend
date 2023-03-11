@@ -2,8 +2,8 @@ Django==4.1.7
 Pillow==9.4.0
 Pygments==2.14.0
 arrow==1.2.3
-boto3==1.26.85
-boto3-stubs==1.26.85
+boto3==1.26.89
+boto3-stubs==1.26.89
 celery==5.2.7
 celery-redbeat==2.0.0
 dj-database-url==1.2.0
