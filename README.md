@@ -80,8 +80,11 @@ Same way, if you need Celery Scheduler – uncomment `celery-beat` service.
 Flower (celery monitoring) is also included, uncomment `flower` service in order to have it running.
 
 For the purpose of using less resource of your machine Redis is used for Celery broker by default.
+
 You can easily switch to using RabbitMQ by uncommenting `rabbitmq` service and `rabbitmq` in all services' `links`
-and `depends_on` sections. Then in `.env` change the broker setting to this: `CELERY_BROKER_URL=amqp://speedpycom:speedpycom@rabbitmq/speedpycom` and `docker-compose restart` so the new settings are
+and `depends_on` sections.
+
+Then in `.env` change the broker setting to this: `CELERY_BROKER_URL=amqp://speedpycom:speedpycom@rabbitmq/speedpycom` and `docker-compose restart` so the new settings are
 applied.
 
 ## Dockerfile
