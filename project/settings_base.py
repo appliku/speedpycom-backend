@@ -311,7 +311,7 @@ class ProjectBaseConfig(Configuration):
             'ACCESS_TOKEN_LIFETIME': timedelta(hours=1),
             'REFRESH_TOKEN_LIFETIME': timedelta(hours=24),
             'SIGNING_KEY': self.SIMPLE_JWT_SIGNING_KEY or self.SECRET_KEY,
-            'ROTATE_REFRESH_TOKENS': False,
+            'ROTATE_REFRESH_TOKENS': True,
             'BLACKLIST_AFTER_ROTATION': True
         }
 

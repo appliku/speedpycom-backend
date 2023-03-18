@@ -9,7 +9,7 @@ from main.api.auth import LogoutView
 
 urlpatterns = [
 
-    path('', include('main.urls')),
+    path('api/', include('main.urls')),
     path('accounts/', include('allauth.urls')),
     path(settings.ADMIN_URL, admin.site.urls),
     # api authentication
